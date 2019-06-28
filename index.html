@@ -7,15 +7,16 @@
     <title>This is my title</title>
   </head>
   <body>
-    <!-- Semantic tag -->
-    <h1>This is my big title</h1>
-    <!-- Semantic tag -->
-    <header>This is an important header</header>
-    <!-- Non Semantic tag. 박스 같은 것이 필요할 때 사용. -->
-    <div>Whatever</div>
-    <!-- Non Semantic tag. 텍스트를 위한 컨테이너 사용 시 사용. -->
-    <span>something else</span>
-    <!-- Semantic tag -->
-    <h6>This is my small title</h6>
+    <section>
+      <!-- id는 고유한 것, class는 중복 사용 가능. -->
+      <header id="headerNumberOne" class="defaultHeader">
+        <h1>Title of a section</h1>
+      </header>
+    </section>
+    <div>
+      <header id="differentHeader" class="defaultHeader">
+        Title of the unknown container
+      </header>
+    </div>
   </body>
 </html>
