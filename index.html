@@ -5,60 +5,46 @@
     <meta name="author" content="Nomad Coders" />
     <meta name="description" content="Welcome to my Kakao Clone" />
     <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+      html,
       body {
-        height: 400%;
+        height: 100%;
+      }
+      .father {
+        display: flex; /* flex를 쓰면 화면을 줄여도 유지됨! */
+        /* justify-content: space-around; /* justify-content: 수평 적용 */
+        /* 디폴트 값으로 flex는 no-wrap이다. 화면 줄여도 줄인 채로 유지되는 것. */
+        flex-wrap: no-wrap;
+        justify-content: space-between;
+        /* center: 중앙 정렬, space-between: 각각의 박스들이 같은 간격으로 나뉨, space-around: 벽 끝, 박스들이 같은 간격으로 나뉨*/
+        align-items: flex-start; /* align-itmes: 수직 적용 */
+        height: 100%;
+        flex-direction: row-reverse; /* align-itmes가 수평, justify-content가 수직으로 적용됨. */
+        /* row-reverse: row로 정렬하긴 하는데 순서 반대로 */
+        /* 디폴트는 flex-direction: row */
+      }
+      .box {
         background-color: red;
-      }
-      /* Position Fixed
-      #boxOne {
-        height: 300px;
-        width: 300px;
-        background-color: yellow;
-        position: static; static: 그 element를 거기 놓으면 거기 있을 것이다 (스크롤하면 안보임) 
-      } 
-      #boxTwo {
-        height: 300px;
-        width: 300px;
-        background-color: green;
-        position: fixed; fixed: 스크롤 내려도 고정됨 
-        bottom: 30%; 30% 떨어져 있는 채 고정 
-        left: 0px;
-      }
-      */
-      .abs-box {
-        width: 400px;
-        height: 500px;
-        background-color: yellow;
-        position: relative;
-      }
-      .abs-child {
-        width: 100px;
-        height: 100px;
-        background-color: green;
-        position: absolute; /* absolute가 설정되면 html 상에서 해당 element와 관계가 있는 (relative - 부모 박스) element를 살펴보고 이에 상응해서 포지션이 결정됨.*/
-        right: 10px;
-        top: 10px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        color: white;
       }
     </style>
-    <title>Position</title>
+    <title>Flex</title>
   </head>
   <body>
-    <div class="abs-box">
-      <div class="abs-child"></div>
+    <!-- inline-block으로 했을 때, 박스가 많으면 깨질 수 있음.. -->
+    <div class="father">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
     </div>
-    <!-- 
-      Position Fixed 
-    <div id="boxOne">
-      <div class="box-child"></div>
-    </div>
-    <div id="boxTwo">
-      <div class="box-child"></div>
-    </div>
-  --></body>
+  </body>
 </html>
