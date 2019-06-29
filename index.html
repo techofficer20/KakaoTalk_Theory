@@ -5,36 +5,22 @@
     <meta name="author" content="Nomad Coders" />
     <meta name="description" content="Welcome to my Kakao Clone" />
     <style>
-      body,
-      html {
-        padding: 0;
-        margin: 0;
-        background-color: green;
-        height: 100%;
-      }
-      body {
-        /* padding-left: 10px; 이것은 box class에서 margin-left와 같다. 즉, 부모 박스에서 padding은 자식 박스에서 margin과 같다. */
-      }
       .box {
-        background-color: yellow;
-        width: 50%;
-        height: 50%;
-        padding: 20px 10px 5px 2px; /* padding은 자기가 부모가 되고 안에 있는 자식 컨텐츠가 이동된다. */
-        /* margin-left: 10px; */
-        /* margin은 자기 자신이 이동된다. */
-      }
-      .inside-box {
-        background-color: blue;
-        width: 50%;
-        height: 50%;
-        border: 5px dashed red;
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        display: inline-block; /* 이렇게 하면 기본적으로 가지고 있던 block 속성이 깨지고 inline으로 되어서 옆으로 배치된다. */
+        /* display: inline; /* 모든 property 값을 지운다. span일 경우에는, 텍스트 크기 만큼만 property가 적용된다. */
       }
     </style>
-    <title>Box Model</title>
+    <title>Inline Example</title>
   </head>
   <body>
-    <div class="box">
-      <div class="inside-box"></div>
-    </div>
+    <!-- box는 기본적으로 block 속성을 가지고 있어서, 옆으로 채워지지 않고 아래로
+    채워진다 -->
+    <span class="box">1</span>
+    <span class="box">2</span>
+    <span class="box">3</span>
   </body>
 </html>
