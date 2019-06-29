@@ -5,22 +5,60 @@
     <meta name="author" content="Nomad Coders" />
     <meta name="description" content="Welcome to my Kakao Clone" />
     <style>
-      .box {
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 400%;
         background-color: red;
-        width: 200px;
-        height: 200px;
-        border: 2px solid black;
-        display: inline-block; /* 이렇게 하면 기본적으로 가지고 있던 block 속성이 깨지고 inline으로 되어서 옆으로 배치된다. */
-        /* display: inline; /* 모든 property 값을 지운다. span일 경우에는, 텍스트 크기 만큼만 property가 적용된다. */
+      }
+      /* Position Fixed
+      #boxOne {
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        position: static; static: 그 element를 거기 놓으면 거기 있을 것이다 (스크롤하면 안보임) 
+      } 
+      #boxTwo {
+        height: 300px;
+        width: 300px;
+        background-color: green;
+        position: fixed; fixed: 스크롤 내려도 고정됨 
+        bottom: 30%; 30% 떨어져 있는 채 고정 
+        left: 0px;
+      }
+      */
+      .abs-box {
+        width: 400px;
+        height: 500px;
+        background-color: yellow;
+        position: relative;
+      }
+      .abs-child {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute; /* absolute가 설정되면 html 상에서 해당 element와 관계가 있는 (relative - 부모 박스) element를 살펴보고 이에 상응해서 포지션이 결정됨.*/
+        right: 10px;
+        top: 10px;
       }
     </style>
-    <title>Inline Example</title>
+    <title>Position</title>
   </head>
   <body>
-    <!-- box는 기본적으로 block 속성을 가지고 있어서, 옆으로 채워지지 않고 아래로
-    채워진다 -->
-    <span class="box">1</span>
-    <span class="box">2</span>
-    <span class="box">3</span>
-  </body>
+    <div class="abs-box">
+      <div class="abs-child"></div>
+    </div>
+    <!-- 
+      Position Fixed 
+    <div id="boxOne">
+      <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+      <div class="box-child"></div>
+    </div>
+  --></body>
 </html>
