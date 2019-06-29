@@ -1,3 +1,7 @@
 /* css는 selector 파트, property 파트로 나뉜다.
-selector {property-name: value;}
+selector {property-name: value;} */
 
+h1 {
+  color: green;
+  font-size: 10px;
+}
